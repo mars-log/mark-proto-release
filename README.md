@@ -2,7 +2,9 @@
 
 설치 파일·플랫폼별 업데이트 정보·배포 도구를 관리함. 제품 소스는 별도 비공개 저장소에 유지함.
 
-- 확정 정책: [빌드·업데이트 정책](https://github.com/isunz/mark-proto-space/blob/main/doc/policies/release/README.md)임.
+원격 저장소는 `mars-log/mark-proto-release`임. 이 저장소는 `mars-log/mark-proto-space`를 clone한 작업 공간의 `release/`에 checkout하는 구성을 권장함. 형제 `packages/client/`와 `apps/desktop/`의 확정 커밋을 같은 작업 공간에서 연결하고 총괄 배포 정책·검증 기록과 함께 여러 독립 Git의 릴리스 상태를 관리하기 용이하기 때문임. 독립 Git과 이력은 그대로 유지함. 단독 clone이나 다른 배치는 아래 환경 변수로 소스 경로를 명시해야 함.
+
+- 확정 정책: [빌드·업데이트 정책](https://github.com/mars-log/mark-proto-space/blob/main/doc/policies/release/README.md)임.
 - Mac에서 실행하면 Mac 로컬 빌드와 Windows CI를 연결함. Windows에서 실행하면 Windows 로컬 빌드와 Mac CI를 연결함.
 - 웹은 별도로 커밋·푸시하며 서버 재시작은 운영자가 수행함.
 - macOS는 DMG를 열고 앱을 응용 프로그램 폴더에 끌어다 놓아 대치함. Apple 공증·코드 서명은 아직 적용하지 않음.
@@ -17,7 +19,7 @@ node scripts/release.js stage        # 비공개 초안으로 업로드하여 �
 node scripts/release.js publish      # 검증된 산출물 서명·업로드·채널 반영
 ```
 
-작업 공간의 로컬 경로는 `release/`이며 원격은 `isunz/mark-proto-release`임. 본체는 `../packages/client`, 데스크톱은 `../apps/desktop`을 사용함. 별도 배치는 `MARKPROTO_APP_DIR`·`MARKPROTO_DESKTOP_DIR`로 지정함. [명명 정책](../doc/policies/repository/README.md)을 따름.
+작업 공간의 로컬 경로는 `release/`이며 원격은 `mars-log/mark-proto-release`임. 본체는 `../packages/client`, 데스크톱은 `../apps/desktop`을 사용함. 별도 배치는 `MARKPROTO_APP_DIR`·`MARKPROTO_DESKTOP_DIR`로 지정함. [명명 정책](../doc/policies/repository/README.md)을 따름.
 
 필수 도구: Node 22 이상, Git, gh 로그인, 로컬 Tauri 빌드 환경임. Windows는 Git Bash에서 실행함. 공개 배포는 저장소 공개 설정을 먼저 확인해야 함. 사용자 확정에 따라 배포 저장소는 공개임. 소스 저장소는 비공개로 유지함.
 
