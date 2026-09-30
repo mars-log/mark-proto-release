@@ -1,0 +1,6 @@
+---
+description: MARKPROTO common authentication and lock policy
+alwaysApply: true
+---
+
+작업 전 저장소 루트 AGENTS.md를 읽음. 인증·세션·잠금·테마 변경은 mars-log/mark-proto-space의 doc/policies/session-lock/README.md 원본을 반드시 확인하고 적용함. 모든 기기·Agent에 동일하게 적용함.
