@@ -26,3 +26,7 @@ node scripts/release.js publish      # 검증된 산출물 서명·업로드·�
 - 업데이트 개인키는 `MARKPROTO_SIGNING_KEY` 또는 `~/.config/markproto-release/updater.key`에서 읽음. 키를 커밋하지 않으며 별도 안전한 백업이 필요함. 비밀번호 사용 시 `TAURI_SIGNING_PRIVATE_KEY_PASSWORD`를 설정함.
 - 데스크톱 CI는 `APP_SOURCE_DEPLOY_KEY`로 고정한 공통 app 소스만 읽음. 읽기 전용 deploy key이며 배포 개인키·GitHub 개인 토큰을 CI에 넣지 않음.
 - `.artifacts/`는 로컬 임시 산출물임. 실패 시 해당 버전 폴더를 점검하고 재시도함. 공개 태그·설치 파일은 덮어쓰지 않음.
+
+## 웹 0.1.1
+
+[검증 산출물과 소스 커밋](web/web-v0.1.1.json)을 기록함. 공개 릴리스의 WAR·SHA-256·매니페스트로 수동 웹 배포에 사용할 수 있음. 운영 서버 재시작 시점은 운영자가 결정함.

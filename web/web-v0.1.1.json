@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "product": "MARKPROTO Web",
+  "version": "0.1.1",
+  "releaseTag": "web-v0.1.1",
+  "artifact": {
+    "name": "mark-proto-web-0.1.1.war",
+    "sha256": "233149de26720dc92a2ce1ce970e85691b0d62bd06e906a287ab41cced246fc2",
+    "bytes": 26582279
+  },
+  "sources": {
+    "server": {
+      "repository": "https://github.com/mars-log/mark-proto-web",
+      "commit": "c541c4fe9608f9d0d530673231e34bfb35abdd86",
+      "tag": "v0.1.1"
+    },
+    "app": {
+      "repository": "https://github.com/mars-log/mark-proto-app",
+      "commit": "bfeba1f183b43cc9c31d58ea9e9144e0e49428f5"
+    },
+    "commonLibrary": {
+      "name": "mars-util",
+      "version": "0.1.101",
+      "sourceCommit": "131e16593f6614c4235eb0f864c9d6c64baf0a79",
+      "sha256": "33f817bf35f59e8e11222ef75ae7dbf297baa5543f43f1b367c3bf6f44be7e66"
+    }
+  },
+  "verification": {
+    "jdk": 21,
+    "database": "isolated PostgreSQL 17.11, NOSUPERUSER/NOBYPASSRLS",
+    "automatedPassed": 70,
+    "legacyComparisonsPassed": 6,
+    "browserPassed": 53,
+    "warStandalone": true,
+    "productionRestarted": false
+  },
+  "deployment": "Manual web deployment; desktop updater channels remain independent"
+}
