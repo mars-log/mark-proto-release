@@ -34,3 +34,5 @@ node scripts/release.js publish      # 검증된 산출물 서명·업로드·�
 ## 웹 0.1.3
 
 [계정 메뉴·프로필·PIN 설정과 mars-auth 유지 검증](web/web-v0.1.3.json)을 기록함. 기존 공용 로그인 외부 설정·키·연결을 유지하는 웹 릴리스이며 데스크톱 업데이트 채널과 구분함.
+
+[웹 0.1.3 운영 반영 결과](web/deployments/web-v0.1.3.json): 공개 WAR와 운영 바이트 일치, mars-auth 설정·기존 연결·세션 유지 및 health 200을 확인함.
